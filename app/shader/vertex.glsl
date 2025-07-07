@@ -78,14 +78,20 @@ uniform float time;
 varying vec3 vUv;
 
 void main() {
-  float noise = snoise(position / 6.0 + cos(time)) * 2.0;
+  float noise = snoise(position / 14.0 + time / 5.0);
 
   vec3 pos = vec3(
     position.x,
     position.y,
     position.z
-  ) + noise;
+  );
 
-  gl_PointSize = 2.0;
+  if (noise > 0.0) {
+    pos += noise * 4.5;
+  } else {
+    pos -= noise + 2.0 * 5.0;
+  }
+
+  gl_PointSize = 0.1;
   gl_Position = projectionMatrix * (modelViewMatrix * vec4(pos, 1.0));
 }

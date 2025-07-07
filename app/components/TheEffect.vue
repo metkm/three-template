@@ -5,7 +5,7 @@ import { Vector2 } from 'three'
 
 const { onLoop } = useRenderLoop()
 
-const size = 25
+const size = 30
 
 const positionData = new Float32Array(size * size * size * 4)
 const uvData = new Float32Array(size * size * size * 3)
@@ -15,9 +15,9 @@ for (let x = 0; x < size; x++) {
     for (let z = 0; z < size; z++) {
       const index = (x * size * size) + (y * size) + z
 
-      positionData[index * 4 + 0] = x / size * 5.0
-      positionData[index * 4 + 1] = y / size * 5.0
-      positionData[index * 4 + 2] = z / size * 5.0
+      positionData[index * 4 + 0] = x / size * 10.0
+      positionData[index * 4 + 1] = y / size * 10.0
+      positionData[index * 4 + 2] = z / size * 10.0
       positionData[index * 4 + 3] = 1.0
 
       uvData[index * 2 + 0] = x / size
