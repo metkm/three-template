@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import vertexShader from '~/shader/vertex.glsl?raw'
-import fragmentShader from '~/shader/fragment.glsl?raw'
+import vertexShader from '~/shader/cube-noise/vertex.glsl?raw'
+import fragmentShader from '~/shader/cube-noise/fragment.glsl?raw'
 import { Vector2 } from 'three'
 
 const { onLoop } = useRenderLoop()

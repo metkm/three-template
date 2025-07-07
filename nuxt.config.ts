@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@tresjs/nuxt'],
   devtools: { enabled: true },
+  routeRules: {
+    '/perlin-noise': { ssr: false },
+    '/fisheye': { ssr: false },
+  },
   future: {
     compatibilityVersion: 4,
   },
