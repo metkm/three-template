@@ -4,12 +4,17 @@ const height = window.innerHeight
 </script>
 
 <template>
-  <TresCanvas window-size>
-    <TresOrthographicCamera
-      :args="[width / -2, width / 2, height / 2, height / -2, 1, 1000]"
-      :position="[0, 0, 1]"
-    />
+  <div class="w-full h-full">
+    <TresCanvas
+      class="w-full h-full"
+      alpha
+    >
+      <TresOrthographicCamera
+        :args="[width / -2, width / 2, height / 2, height / -2, 1, 1000]"
+        :position="[0, 0, 1]"
+      />
 
-    <ThePerlinNoise />
-  </TresCanvas>
+      <ThePerlinNoise />
+    </TresCanvas>
+  </div>
 </template>

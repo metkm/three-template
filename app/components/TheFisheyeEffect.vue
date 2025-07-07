@@ -44,6 +44,7 @@ const pixelRatio = window.devicePixelRatio
 
     <TresShaderPass
       :ref="(shaderPass: ShaderPass) => {
+        if (!shaderPass) return
         shaderPass.renderToScreen = true
 
         if (camera) {

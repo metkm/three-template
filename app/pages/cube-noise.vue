@@ -1,16 +1,18 @@
 <template>
-  <TresCanvas
-    window-size
-    clear-color="black"
-  >
-    <TresPerspectiveCamera
-      :position="[16, 16, 16]"
-      :look-at="[0, 0, 0]"
-    />
+  <div class="w-full h-full">
+    <TresCanvas
+      class="w-full h-full"
+      alpha
+    >
+      <TresPerspectiveCamera
+        :position="[16, 16, 16]"
+        :look-at="[0, 0, 0]"
+      />
 
-    <TresAxesHelper />
-    <TheOrbitControls />
+      <TresAxesHelper />
+      <TheOrbitControls />
 
-    <TheCubeNoise />
-  </TresCanvas>
+      <TheCubeNoise />
+    </TresCanvas>
+  </div>
 </template>

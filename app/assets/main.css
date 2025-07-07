@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  --ui-radius: 50rem;
+}
+
+html, body {
+  background-color: var(--ui-bg);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 2s;
+}
+
+.page-leave-active {
+  position: absolute;
+  inset: 0;
+}
+
+.page-enter-active {
+  z-index: 50;
+  background-color: var(--ui-bg);
+}
+
+.page-leave-to {
+  transform: translateY(-150px);
+  opacity: 0;
+}
+
+.page-enter-from {
+  transform: translateY(100%);
+}
+
+.page-leave-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .page-enter-active,
+.page-leave-active {
+  transition: all 2s;
+  background-color: var(--ui-bg);
+}
+
+.page-leave-active {
+  position: absolute;
+  inset: 0;
+}
+
+.page-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.page-enter-active {
+  z-index: 50;
+}
+
+.page-enter-from {
+  transform: translateY(100%);
+} */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-enter {
+  animation: fade-in 1s both 1;
+  --enter-stage: 1;
+  animation-delay: calc(150ms * var(--enter-stage));
+}

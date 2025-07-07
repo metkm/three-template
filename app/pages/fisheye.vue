@@ -29,7 +29,10 @@ extend({ EffectComposer, OutputPass, RenderPass, ShaderPass })
   <div>
     <div class="crt" />
 
-    <TresCanvas window-size>
+    <TresCanvas
+      class="w-screen h-screen"
+      alpha
+    >
       <TresPerspectiveCamera
         :position="[6 * 5, 6 * 3, 20]"
       />
