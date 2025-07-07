@@ -1,11 +1,16 @@
 <template>
-  <TresCanvas window-size>
+  <TresCanvas
+    window-size
+    clear-color="black"
+  >
     <TresPerspectiveCamera
-      :position="[5, 5, 5]"
+      :position="[10, 10, 10]"
       :look-at="[0, 0, 0]"
     />
 
     <TresAxesHelper />
+
+    <TheOrbitControls />
     <TheEffect />
   </TresCanvas>
 </template>
