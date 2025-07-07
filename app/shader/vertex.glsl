@@ -84,12 +84,16 @@ void main() {
     position.x,
     position.y,
     position.z
-  );
+  ) + noise;
+
+  // if (noise > 0.0) {
+  //   pos += noise * 4.5;
+  // } else {
+  //   pos -= noise + 2.0 * 5.0;
+  // }
 
   if (noise > 0.0) {
-    pos += noise * 4.5;
-  } else {
-    pos -= noise + 2.0 * 5.0;
+    pos += 20.0;
   }
 
   gl_PointSize = 0.1;
