@@ -56,7 +56,12 @@ const pixelRatio = window.devicePixelRatio
         }
       }"
       :args="[shaderDefinition]"
+      :set-size="[sizes.width.value, sizes.height.value]"
       attach="passes-1"
     />
+    <!-- <TresOutputPass
+      attach="passes-2"
+      :set-size="[sizes.width.value, sizes.height.value]"
+    /> -->
   </TresEffectComposer>
 </template>

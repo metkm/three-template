@@ -26,11 +26,11 @@ extend({ EffectComposer, OutputPass, RenderPass, ShaderPass })
 </script>
 
 <template>
-  <div>
+  <div class="w-full h-full">
     <div class="crt" />
 
     <TresCanvas
-      class="w-screen h-screen"
+      class="w-full h-full"
       alpha
     >
       <TresPerspectiveCamera
@@ -42,6 +42,7 @@ extend({ EffectComposer, OutputPass, RenderPass, ShaderPass })
       </Suspense>
 
       <TheFisheyeEffect />
+      <!-- <TheOrbitControls /> -->
     </TresCanvas>
   </div>
 </template>
