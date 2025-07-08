@@ -13,7 +13,6 @@
     "@nuxt/eslint": "^1.5.2",
     "@nuxt/ui": "^3.2.0",
     "@tresjs/nuxt": "^4.0.0",
-    "@tresjs/post-processing": "^2.4.0",
     "eslint": "^9.30.1",
     "nuxt": "^3.17.6",
     "three": "^0.178.0",
